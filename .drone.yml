@@ -25,46 +25,46 @@ pipeline:
     commands:
       - make linux_amd64
 
-  linux_arm64:
-    image: appleboy/golang-testing
-    pull: true
-    group: golang
-    commands:
-      - make linux_arm64
+  # linux_arm64:
+  #   image: appleboy/golang-testing
+  #   pull: true
+  #   group: golang
+  #   commands:
+  #     - make linux_arm64
 
-  linux_arm:
-    image: appleboy/golang-testing
-    pull: true
-    group: golang
-    commands:
-      - make linux_arm
+  # linux_arm:
+  #   image: appleboy/golang-testing
+  #   pull: true
+  #   group: golang
+  #   commands:
+  #     - make linux_arm
 
-  test:
-    image: appleboy/golang-testing
-    pull: true
-    group: golang
-    commands:
-      - make ssh-server
-      - make test
-      - make coverage
+  # test:
+  #   image: appleboy/golang-testing
+  #   pull: true
+  #   group: golang
+  #   commands:
+  #     - make ssh-server
+  #     - make test
+  #     - make coverage
 
-  release:
-    image: appleboy/golang-testing
-    pull: true
-    commands:
-      - make release
-    when:
-      event: [ tag ]
-      local: false
+  # release:
+  #   image: appleboy/golang-testing
+  #   pull: true
+  #   commands:
+  #     - make release
+  #   when:
+  #     event: [ tag ]
+  #     local: false
 
-  codecov:
-    image: robertstettner/drone-codecov
-    secrets: [ codecov_token ]
-    files:
-      - .cover/coverage.txt
-    when:
-      event: [ push, pull_request ]
-      status: [ success ]
+  # codecov:
+  #   image: robertstettner/drone-codecov
+  #   secrets: [ codecov_token ]
+  #   files:
+  #     - .cover/coverage.txt
+  #   when:
+  #     event: [ push, pull_request ]
+  #     status: [ success ]
 
   publish:
     image: plugins/docker
