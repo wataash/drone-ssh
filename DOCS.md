@@ -1,12 +1,14 @@
 ---
 date: 2017-01-29T00:00:00+00:00
 title: SSH
-author: appleboy
+author: wataash
 tags: [ publish, ssh ]
-repo: appleboy/drone-ssh
+repo: wataash/drone-ssh
 logo: term.svg
-image: appleboy/drone-ssh
+image: wataash/drone-ssh
 ---
+
+Experimental fork of appleboy/drone-ssh.
 
 Use the SSH plugin to execute commands on a remote server. The below pipeline configuration demonstrates simple usage:
 

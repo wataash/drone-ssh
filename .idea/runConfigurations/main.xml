@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="main" type="GoApplicationRunConfiguration" factoryName="Go Application">
+    <module name="drone-ssh" />
+    <working_directory value="$PROJECT_DIR$/" />
+    <parameters value="-H localhost -u wsh -i ${HOME}/.ssh/id_ed25519 -s &quot;sh -c \&quot;echo foo ; echo bar &gt;&amp;2 echo baz\&quot;&quot;" />
+    <kind value="PACKAGE" />
+    <filePath value="$PROJECT_DIR$/main.go" />
+    <package value="github.com/wataash/drone-ssh" />
+    <directory value="$PROJECT_DIR$/" />
+    <method v="2" />
+  </configuration>
+</component>

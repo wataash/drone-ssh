@@ -7,9 +7,9 @@ RUN apk update && \
   rm -rf /var/cache/apk/*
 
 LABEL org.label-schema.version=latest
-LABEL org.label-schema.vcs-url="https://github.com/appleboy/drone-ssh.git"
+LABEL org.label-schema.vcs-url="https://github.com/wataash/drone-ssh.git"
 LABEL org.label-schema.name="drone-ssh"
-LABEL org.label-schema.vendor="Bo-Yi Wu"
+LABEL org.label-schema.vendor="wataash"
 LABEL org.label-schema.schema-version="1.0"
 
 ADD release/linux/amd64/drone-ssh /bin/
